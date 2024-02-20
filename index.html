@@ -1,21 +1,54 @@
 <!DOCTYPE html>
-<>
-    <head>
-        <title>Calculadora de Hidratación</title>
-    </head>
-    <body>
+<html>
+<head>
+    <title>Calculadora de Hidratación</title>
+</head>
+<body>
+    <div>
         <div>
-            <div>
-                <h1>Calculadora de Hidratación</h1>
-                <input type="number" placeholder="Peso en Kg"/>
-                <button>Calcular</button> 
-                <h1>Como se calcula</h1>
-                <ul>
-                    <li>De 0kg a 10kg, se calcula 100cc por cada kilo.</li>
-                    <li>Se suman 50cc por cada kilo de peso por arriba de 10kg, hasta 20kg</li>
-                    <li>De 20kg para arriba, se suman 20cc por cada kilo adicional</li>
-                </ul>
-            </div>
+            <h1>Calculadora de Hidratación</h1>
+            <label for="peso">Peso en Kg:</label>
+            <input type="number" id="peso" placeholder="Ingrese el peso en Kg"/>
+            <button onclick="calcularHidratacion()">Calcular</button>
+            <p id="resultado"></p>
         </div>
-    </body>
+        <div>
+            <h1>¿Cómo se calcula?</h1>
+            <ul>
+                <li>De 0kg a 10kg, se calcula 100cc por cada kilo.</li>
+                <li>Se suman 50cc por cada kilo de peso por arriba de 10kg, hasta 20kg.</li>
+                <li>De 20kg para arriba, se suman 20cc por cada kilo adicional.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function calcularHidratacion() {
+            var peso = document.getElementById("peso").value;
+            var resultadoElemento = document.getElementById("resultado");
+
+            // Validar que el peso sea un número
+            if (isNaN(peso)) {
+                resultadoElemento.textContent = "Por favor, ingrese un valor válido para el peso.";
+                return;
+            }
+
+            // Convertir el peso a número
+            peso = parseFloat(peso);
+
+            // Calcular la hidratación según las reglas dadas
+            var hidratacion = 0;
+            if (peso >= 0 && peso <= 10) {
+                hidratacion = peso * 100;
+            } else if (peso > 10 && peso <= 20) {
+                hidratacion = 10 * 100 + (peso - 10) * 50;
+            } else if (peso > 20) {
+                hidratacion = 10 * 100 + 10 * 50 + (peso - 20) * 20;
+            }
+
+            // Mostrar el resultado
+            resultadoElemento.textContent = "La hidratación recomendada es de " + hidratacion + " cc.";
+        }
+    </script>
+</body>
 </html>
