@@ -2,7 +2,7 @@ function calcularHidratacion(){
     var peso = document.getElementById("peso").value;
     var resultadoElemento = document.getElementById("resultado");
 
-    // Weight convertion to a number
+    // Weight convertion string to a float
     peso = parseFloat(peso);
 
     //Calculate hydration according to the given rules
