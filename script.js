@@ -4,7 +4,7 @@ function calcularHidratacion(){
 
     // Weight validation
     if (isNaN(peso)) {
-        resultadoElemento.textContent = "Por favor, ingrese un valor válido para el peso.";
+        resultadoElemento.innerHTML = "Por favor, ingrese un valor válido para el peso.";
         return;
     }
 
