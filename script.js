@@ -1,4 +1,4 @@
-function calcularHidratacion() {
+function calcularHidratacion(){
     var peso = document.getElementById("peso").value;
     var resultadoElemento = document.getElementById("resultado");
 
