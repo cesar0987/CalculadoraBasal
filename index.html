@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Calculadora de Hidratación</title>
+    <script src="script.js"></script>
 </head>
 <body>
     <div>
@@ -21,34 +22,5 @@
             </ul>
         </div>
     </div>
-
-    <script>
-        function calcularHidratacion() {
-            var peso = document.getElementById("peso").value;
-            var resultadoElemento = document.getElementById("resultado");
-
-            // Validar que el peso sea un número
-            if (isNaN(peso)) {
-                resultadoElemento.textContent = "Por favor, ingrese un valor válido para el peso.";
-                return;
-            }
-
-            // Convertir el peso a número
-            peso = parseFloat(peso);
-
-            // Calcular la hidratación según las reglas dadas
-            var hidratacion = 0;
-            if (peso >= 0 && peso <= 10) {
-                hidratacion = peso * 100;
-            } else if (peso > 10 && peso <= 20) {
-                hidratacion = 10 * 100 + (peso - 10) * 50;
-            } else if (peso > 20) {
-                hidratacion = 10 * 100 + 10 * 50 + (peso - 20) * 20;
-            }
-
-            // Mostrar el resultado
-            resultadoElemento.textContent = "La hidratación recomendada es de " + hidratacion + " cc.";
-        }
-    </script>
 </body>
 </html>
