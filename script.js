@@ -23,4 +23,3 @@ function calcularHidratacion() {
     // Show the result
     resultadoElemento.textContent = "La hidratación recomendada es de " + hidratacion + " cc.";
 }
-}
