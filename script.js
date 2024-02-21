@@ -20,8 +20,7 @@ function calcularHidratacion() {
     } else if (peso > 20) {
         hidratacion = 10 * 100 + 10 * 50 + (peso - 20) * 20;
     }
-    else if (peso > 30) {
-
     // Show the result
     resultadoElemento.textContent = "La hidratación recomendada es de " + hidratacion + " cc.";
+}
 }
