@@ -26,7 +26,7 @@ function calcularHidratacion() {
     mantenimiento = hidratacion / 24;
     mm2 = mantenimiento * 1.5;
     // Show the result
-    resultadoElemento.innerHTML =   hidratacion + " cc.<br>"  + mantenimiento + "cc/hr.<br>" + mm2 + "cc/hr.";
+    resultadoElemento.innerHTML =   hidratacion+ " cc.<br>"  + mantenimiento.toFixed(2) + "cc/hr.<br>" + mm2 + "cc/hr.";
 }
 // Function to calculate SC value based on weight
 function calculoSC(peso) {

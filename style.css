@@ -16,6 +16,7 @@
 .leftbox,
 .rightbox {
     height: 100%;
+    
 }
 #calculadora,
 #detalle {
@@ -26,7 +27,6 @@
     justify-content: center;
     align-items: center;
     float:left;
-    
     
 }
 
