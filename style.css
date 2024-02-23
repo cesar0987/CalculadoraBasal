@@ -35,7 +35,7 @@
 }
 
 #detalle {
-    background: #FF416C;
+    background: #bd0530;
     color: #f6f5f7;
 }
 
@@ -76,8 +76,8 @@ button {
     padding: 12px 45px;
     margin-top: 10px; 
     border-radius: 20px;
-    background-color: #FF416C;
-    border: 1px solid #FF416C;
+    background-color: #bd0530;
+    border: 1px solid #bd0530;
     color: #FFFFFF;
     text-transform: uppercase;
     letter-spacing: 1px;
