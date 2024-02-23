@@ -49,15 +49,16 @@
     display: none;
 }
 
-.resultado{
+#resultado{
     color: #0A81D1;
     font-weight: bold;
     font-size: 25px;
     margin-bottom: 5px;
     display: none;
+    transition: all 0.3 ease-in-out;
 }
 body{
-    background: #f6f5f7; 
+    background: #ffffff; 
     font-family: 'Montserrat', sans-serif;
     color: #3E363F;
 }

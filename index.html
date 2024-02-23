@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Hidratación Basal</title>
     <link rel="stylesheet" href="style.css">
+    <script  src="script.js" defer></script>
 </head>
 
 <body>
-    <script src="script.js"></script>
+    
     <div id="contenedor">
         <div id ="calculadora" class="leftbox">
             <div>
-                <h1>Calculadora de Hidratación Basal</h1>
+                <h1>Hidratación Basal</h1>
                 <p>Completa los datos</p>
                 <input type="number" id="peso" placeholder="Ingrese el peso en Kg" />
-                <button onclick="calcularHidratacion()">Calcular</button>
+                <button id="calculadoraBuena">Calcular</button>
                 <p id="resultado"></p>
             </div>
         </div>
