@@ -3,11 +3,11 @@ const RESULTADO = document.getElementById("resultado");
 const INPUT = document.getElementById("peso");
 CALCULAR.addEventListener("click", calcularHidratacion);
 function calcularHidratacion() {
-  var peso = document.getElementById("peso").value;
+  var peso = document.getElementById("peso").valueAsNumber;
   var resultadoElemento = document.getElementById("resultado");
 
   // Weight convertion string to a float
-  peso = parseFloat(peso);
+  
 
   //Calculate hydration according to the given rules
   var hidratacion = 0;
@@ -15,15 +15,12 @@ function calcularHidratacion() {
   var mm2 = 0;
 
   // Weight validation and calculation
-    if(peso<=0){
-      resultadoElemento.innerHTML ="Por favor ingresar los datos de manera correcta";
-      resultado.style.display= "block";
+  if (isNaN(peso) || peso <= 0) {
+    resultadoElemento.innerHTML = "Por favor ingresar los datos de manera correcta";
+    RESULTADO.style.display = "block";
     return;
-  } else if(isNaN(peso)) {
-      resultadoElemento.innerHTML ="Por favor ingresar los datos";
-      resultado.style.display= "block";
-    return;
-  }else if ( peso <= 10) {
+  }
+  if ( peso <= 10) {
       hidratacion = peso * 100;
   } else if (peso <= 20) {
       hidratacion = 1000 + (peso - 10) * 50;
