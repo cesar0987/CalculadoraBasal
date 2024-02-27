@@ -2,6 +2,10 @@ const CALCULAR = document.getElementById("calculadoraBuena");
 const RESULTADO = document.getElementById("resultado");
 const INPUT = document.getElementById("peso");
 CALCULAR.addEventListener("click", calcularHidratacion);
+//Input value cleared
+INPUT.addEventListener("click",() => {
+  INPUT.value="";
+  })
 function calcularHidratacion() {
   let peso = document.getElementById("peso").valueAsNumber;
   let resultadoElemento = document.getElementById("resultado");
