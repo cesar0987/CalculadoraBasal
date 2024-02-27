@@ -2,9 +2,6 @@ const CALCULAR = document.getElementById("calculadoraBuena");
 const RESULTADO = document.getElementById("resultado");
 const INPUT = document.getElementById("peso");
 CALCULAR.addEventListener("click", calcularHidratacion);
-CALCULAR.addEventListener("click",()=>{
-    INPUT.innerHTML = ``;
-})
 function calcularHidratacion() {
   var peso = document.getElementById("peso").value;
   var resultadoElemento = document.getElementById("resultado");
@@ -26,12 +23,12 @@ function calcularHidratacion() {
       resultadoElemento.innerHTML ="Por favor ingresar los datos";
       resultado.style.display= "block";
     return;
-  }else if (peso >= 1 && peso <= 10) {
+  }else if ( peso <= 10) {
       hidratacion = peso * 100;
-  } else if (peso > 10 && peso <= 20) {
-      hidratacion = 10 * 100 + (peso - 10) * 50;
+  } else if (peso <= 20) {
+      hidratacion = 1000 + (peso - 10) * 50;
   } else if (peso > 20) {
-      hidratacion = 10 * 100 + 10 * 50 + (peso - 20) * 20;
+      hidratacion = 1500 + (peso - 20) * 20;
   } else if (peso > 30) {
       hidratacion = calculoSC(peso) * 1500;
   }
