@@ -19,11 +19,11 @@ function calcularHidratacion() {
 
   // Weight validation and calculation
     if(peso<=0){
-      resultadoElemento.innerHTML ="Porfavor ingresar los datos de manera correcta";
+      resultadoElemento.innerHTML ="Por favor ingresar los datos de manera correcta";
       resultado.style.display= "block";
     return;
   } else if(isNaN(peso)) {
-      resultadoElemento.innerHTML ="Porfavor ingresar los datos";
+      resultadoElemento.innerHTML ="Por favor ingresar los datos";
       resultado.style.display= "block";
     return;
   }else if (peso >= 1 && peso <= 10) {
