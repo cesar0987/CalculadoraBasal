@@ -37,7 +37,7 @@
 }
 
 #detalle {
-    background: #bd0530;
+    background: #7e021f;
     color: #f6f5f7;
 }
 
@@ -46,7 +46,7 @@
     box-sizing: border-box;
 }
 #error{
-    color: red;
+    color: rgb(110, 12, 12);
     font-weight: bold;
     display: none;
 }
@@ -78,8 +78,8 @@ button {
     padding: 12px 45px;
     margin-top: 10px; 
     border-radius: 20px;
-    background-color: #bd0530;
-    border: 1px solid #bd0530;
+    background-color: #5e0419;
+    border: 1px solid #6c021b;
     color: #FFFFFF;
     text-transform: uppercase;
     letter-spacing: 1px;
