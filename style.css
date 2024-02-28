@@ -103,4 +103,7 @@ button:active {
     #detalle {
         width: 100%;   
     }
+    #detalle{
+        margin-top: 20px;
+    }
 }
